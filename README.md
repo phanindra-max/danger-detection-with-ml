@@ -28,8 +28,8 @@ ________________________________________
     - `pip install opencv-python`
     - `pip install secure-smtplib`
 - After installing the  required libraries, you might want to restart the IDE to prevent any errors.
-- Then you also need the yolov3.weights file to run this program.
-- Since GitHub has file size restrictions, you need to download it from this [Link]()
+- Then you also need the `yolov3.weights` file to run this program.
+- Since GitHub has file size restrictions, you need to download it from this [Link](https://mega.nz/file/jFxnXIJI#q7NgkCPMzWje2M_0EvOYyxT9oIkCLJ2SlbyklxfR13k)
 - After downloading the file you need to place it in the same directory as *With_mail.py*.
 - Now, change the `mailfrom` variable in the 26th line of *With_mail.py*
 - Enter your password in `gmailpass` variable in the 27th line of *With_mail.py*.
