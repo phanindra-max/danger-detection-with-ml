@@ -31,9 +31,9 @@ ________________________________________
 - Then you also need the `yolov3.weights` file to run this program.
 - Since GitHub has file size restrictions, you need to download it from this [Link](https://mega.nz/file/jFxnXIJI#q7NgkCPMzWje2M_0EvOYyxT9oIkCLJ2SlbyklxfR13k)
 - After downloading the file you need to place it in the same directory as *With_mail.py*.
-- Now, change the `mailfrom` variable in the 26th line of *With_mail.py*
-- Enter your password in `gmailpass` variable in the 27th line of *With_mail.py*.
-- Enter the reciver's email address in `mailto` variable in the 28th line of *With_mail.py*.
+- Now, change the `mailfrom` variable in the line 26 of *With_mail.py*
+- Enter your password in `gmailpass` variable in line 27 of *With_mail.py*.
+- Enter the reciver's email address in `mailto` variable in the line 28 of *With_mail.py*.
 
 ### Now you can run the code🤘🏻😎 and receive an email if any danger/threat is detected.
 ________________________________________
@@ -41,6 +41,5 @@ ________________________________________
 - Feel free to raise an issue if you've found any.
 - For any doubts/queries, you can raise an issue too or reach out to me directly on [Twitter](https://twitter.com/Phanind52024538)
 
-### “Any fool can write code that a computer can understand. Good programmers write code that humans can understand.” – Martin Fowler
 
 
