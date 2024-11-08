@@ -13,34 +13,29 @@ A real-time threat detection system using computer vision and machine learning t
 - Easy-to-use interface for security monitoring
 - Configurable alert thresholds and notification settings
 
-## 🌟 Impact & Use Cases
+## 🌟 System Requirements
 
-- Enhanced security monitoring for public spaces
-- Early fire detection systems
-- Research and development in computer vision security
-- Educational tool for ML/CV students
+- Python 3.8+
+- OpenCV 4.5+
+- CUDA support (optional, for GPU acceleration)
+- Webcam or USB camera
+- Minimum 4GB RAM
+- x86_64 architecture
+- Git (for cloning)
 
 ## 🚀 Quick Start
-
-### Prerequisites
-
-- Python 3.8 or higher
-- Git (for cloning)
-- Webcam or video input device
 
 ### Installation
 
 1. Clone the repository:
 ```bash
 git clone https://github.com/phanindra-max/danger-detection-with-ml.git
-cd danger-detection-ml
+cd danger-detection-with-ml
 ```
 
-2. Create and activate a virtual environment (recommended):
+2. Create and activate a virtual environment:
 ```bash
 python -m venv venv
-source venv/bin/activate  # Linux/Mac
-# or
 venv\Scripts\activate  # Windows
 ```
 
@@ -49,76 +44,106 @@ venv\Scripts\activate  # Windows
 pip install -r requirements.txt
 ```
 
-4. Download YOLOv3 weights:
+Your `requirements.txt` should contain:
+```txt
+opencv-python>=4.5.0
+numpy>=1.19.0
+argparse>=1.4.0
+```
+
+### Required Files Setup
+
+1. **Download YOLOv3 weights and config:**
 ```bash
-# Option 1: Using wget
-wget https://mega.nz/file/jFxnXIJI#q7NgkCPMzWje2M_0EvOYyxT9oIkCLJ2SlbyklxfR13k -O yolov3.weights
+# Download weights
+curl -L https://pjreddie.com/media/files/yolov3.weights -o yolov3.weights
 
-# Option 2: Manual download
-# Visit the link below and place the file in the project root:
-# https://mega.nz/file/jFxnXIJI#q7NgkCPMzWje2M_0EvOYyxT9oIkCLJ2SlbyklxfR13k
+# Download config
+curl -L https://raw.githubusercontent.com/pjreddie/darknet/master/cfg/yolov3.cfg -o yolov3.cfg
 ```
 
-### Configuration
+2. **Create 
 
-1. Copy the example configuration file:
+obj.names
+
+ file:**
+Create a new file named 
+
+obj.names
+
+ with the following content:
+```txt
+gun
+rifle
+fire
+```
+
+### Email Configuration
+
+1. **Setup Gmail Authentication:**
+   - Enable 2-Factor Authentication in your Gmail account
+   - Generate an App Password:
+     1. Go to Google Account → Security → App Passwords
+     2. Select "Mail" and "Windows Computer"
+     3. Copy the 16-digit password
+
+2. **Update Email Settings:**
+```python
+# In main.py, update these variables:
+mailfrom = "your.email@gmail.com"
+gmailpass = "your-16-digit-app-password"
+mailto = "receiver@email.com"
+```
+
+## 💻 Usage
+
+### Command Line Options
+
 ```bash
-cp config.example.yml config.yml
+python main.py [--webcam True/False] [--image True/False] [--image_path PATH] [--verbose True/False]
 ```
 
-2. Update `config.yml` with your email settings:
-```yaml
-email:
-  sender: "your-email@gmail.com"
-  password: "your-app-specific-password"
-  recipient: "recipient@example.com"
-```
+Options:
+- `--webcam`: Enable webcam mode
+- `--image`: Enable image mode
+- `--image_path`: Path to input image (default: "use-this.jpg")
+- `--verbose`: Enable verbose output
 
-### Usage
+### Basic Usage
 
-Run the main detection script:
 ```bash
 python main.py
 ```
-
-## 📖 Documentation
-
-- [Detailed Installation Guide](docs/installation.md)
-- [Configuration Options](docs/configuration.md)
-- [API Reference](docs/api.md)
-- [Contributing Guidelines](CONTRIBUTING.md)
-
+When prompted, enter 'Y' to start webcam detection.
 
 ## 📊 Performance
 
 - Average processing speed: 25 FPS on CPU
-- Accuracy depends on image quality and performance depends on CPU capability.
+- GPU acceleration available with CUDA support
+- Accuracy depends on image quality and lighting conditions
 
 ## 🤝 Contributing
 
-We welcome contributions from the community! Please be aware of the 
-
-- Code style and standards
-- Submission process
-- Development workflow
-- Bug reports and feature requests
+We welcome contributions! Please see Contributing Guidelines.
 
 ## 🌈 Community & Support
 
-Feel free to reach out to me in the discussions tab or the following places:
 - [Twitter](https://x.com/phanindraMax)
 - [BlueSky](https://bsky.app/profile/phanindra-max.bsky.social)
 - [LinkedIn](https://www.linkedin.com/in/phanindra-max/)
 
 ## 📝 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+MIT License - see 
+
+LICENSE
+
+ file.
 
 ## 🙏 Acknowledgments
 
-- YOLOv3 team for the object detection model
-- OpenCV community for computer vision tools
-
+- YOLOv3 team for the detection model
+- OpenCV community for vision tools
 
 ## 📈 Roadmap
 
@@ -127,9 +152,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [ ] Improve detection accuracy
 - [ ] Add cloud deployment options
 
-
 ---
 
-> "Any fool can write code that a computer can understand. Good programmers write code that humans can understand." – Martin Fowler
-
-Made with Love❤️ for Safety🦺
+Made with ❤️ for Safety 🦺
