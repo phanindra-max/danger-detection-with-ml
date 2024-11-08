@@ -78,7 +78,7 @@ email:
 
 Run the main detection script:
 ```bash
-python with_mail.py
+python main.py
 ```
 
 ## 📖 Documentation
