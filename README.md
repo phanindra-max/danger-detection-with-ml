@@ -32,7 +32,7 @@ A real-time threat detection system using computer vision and machine learning t
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/danger-detection-ml.git
+git clone https://github.com/phanindra-max/danger-detection-ml.git
 cd danger-detection-ml
 ```
 
