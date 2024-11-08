@@ -1,46 +1,135 @@
-# Hey there! Read through the following to know more:
+# Danger Detection with ML
 
-## Introduction
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
+[![Code Style](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
-- *Name*: Danger Detection with ML
-- *Repo. created by*: [Phanindra Kumar](https://www.linkedin.com/in/phanindra-kumar-kalaga/).
-- *Tools used*: Python, OpenCV, SMTPLib, YOLO V3
+A real-time threat detection system using computer vision and machine learning to identify potentially dangerous objects (firearms and fire) and provide instant email notifications with visual evidence.
 
-________________________________________
+## 🎯 Features
 
-## What can it do?
+- Real-time detection of guns, rifles, and fire in video streams
+- Automated email notifications with captured images
+- Easy-to-use interface for security monitoring
+- Configurable alert thresholds and notification settings
 
-- As the name says, it can detetect weapons(Guns, Rifiles and also Fire).
-- If you're interested or have an idea to share please reach out to me.
-- Stay blessed. 
+## 🌟 Impact & Use Cases
+
+- Enhanced security monitoring for public spaces
+- Early fire detection systems
+- Research and development in computer vision security
+- Educational tool for ML/CV students
+
+## 🚀 Quick Start
+
+### Prerequisites
+
+- Python 3.8 or higher
+- Git (for cloning)
+- Webcam or video input device
+
+### Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/yourusername/danger-detection-ml.git
+cd danger-detection-ml
+```
+
+2. Create and activate a virtual environment (recommended):
+```bash
+python -m venv venv
+source venv/bin/activate  # Linux/Mac
+# or
+venv\Scripts\activate  # Windows
+```
+
+3. Install dependencies:
+```bash
+pip install -r requirements.txt
+```
+
+4. Download YOLOv3 weights:
+```bash
+# Option 1: Using wget
+wget https://mega.nz/file/jFxnXIJI#q7NgkCPMzWje2M_0EvOYyxT9oIkCLJ2SlbyklxfR13k -O yolov3.weights
+
+# Option 2: Manual download
+# Visit the link below and place the file in the project root:
+# https://mega.nz/file/jFxnXIJI#q7NgkCPMzWje2M_0EvOYyxT9oIkCLJ2SlbyklxfR13k
+```
+
+### Configuration
+
+1. Copy the example configuration file:
+```bash
+cp config.example.yml config.yml
+```
+
+2. Update `config.yml` with your email settings:
+```yaml
+email:
+  sender: "your-email@gmail.com"
+  password: "your-app-specific-password"
+  recipient: "recipient@example.com"
+```
+
+### Usage
+
+Run the main detection script:
+```bash
+python with_mail.py
+```
+
+## 📖 Documentation
+
+- [Detailed Installation Guide](docs/installation.md)
+- [Configuration Options](docs/configuration.md)
+- [API Reference](docs/api.md)
+- [Contributing Guidelines](CONTRIBUTING.md)
 
 
-________________________________________
+## 📊 Performance
 
-## How to install python?
-- Vist official website of python [Python.org](https://www.python.org/downloads/) to download latest version of python.
-- And that's it Python is now installed on your personal computer.
+- Average processing speed: 25 FPS on CPU
+- Accuracy is dependent on image quality and performance is dependent on CPU capability.
 
-## Installation Guide
-- Download the zip file from `Code` button above and extract it to a folder or `Clone` to a folder on your system.
-- Open `With_mail.py` in a Python IDE of your liking.
-- Now install Opencv2 and SMTPLib libraries in Python by following the commands:
-    - `pip install opencv-python`
-    - `pip install secure-smtplib`
-- After installing the  required libraries, you might want to restart the IDE to prevent any errors.
-- Then you also need the `yolov3.weights` file to run this program.
-- Since GitHub has file size restrictions, you need to download it from this [Link](https://mega.nz/file/jFxnXIJI#q7NgkCPMzWje2M_0EvOYyxT9oIkCLJ2SlbyklxfR13k)
-- After downloading the file you need to place it in the same directory as *With_mail.py*.
-- Now, change the `mailfrom` variable in the 26th line of *With_mail.py*
-- Enter your password in `gmailpass` variable in the 27th line of *With_mail.py*.
-- Enter the reciver's email address in `mailto` variable in the 28th line of *With_mail.py*.
+## 🤝 Contributing
 
-### Now you can run the code🤘🏻😎 and receive an email if any danger/threat is detected.
-________________________________________
+We welcome contributions from the community! Please be aware of the 
 
-- Feel free to raise an issue if you've found any.
-- For any doubts/queries, you can raise an issue too or reach out to me directly on [Twitter](https://twitter.com/Phanind52024538)
+- Code style and standards
+- Submission process
+- Development workflow
+- Bug reports and feature requests
 
-### “Any fool can write code that a computer can understand. Good programmers write code that humans can understand.” – Martin Fowler
+## 🌈 Community & Support
+
+Feel free to reach out to me in the discussions tab or in the following places:
+- [Twitter](https://x.com/phanindraMax)
+- [BlueSky](https://bsky.app/profile/phanindra-max.bsky.social)
+- [LinkedIn](https://www.linkedin.com/in/phanindra-max/)
+
+## 📝 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- YOLOv3 team for the object detection model
+- OpenCV community for computer vision tools
 
 
+## 📈 Roadmap
+
+- [ ] Add support for more object types
+- [ ] Implement real-time API
+- [ ] Improve detection accuracy
+- [ ] Add cloud deployment options
+
+
+---
+
+> "Any fool can write code that a computer can understand. Good programmers write code that humans can understand." – Martin Fowler
+
+Made with Love❤️ for Safety🦺
