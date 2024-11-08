@@ -92,7 +92,7 @@ python with_mail.py
 ## 📊 Performance
 
 - Average processing speed: 25 FPS on CPU
-- Accuracy is dependent on image quality and performance is dependent on CPU capability.
+- Accuracy depends on image quality and performance depends on CPU capability.
 
 ## 🤝 Contributing
 
@@ -105,7 +105,7 @@ We welcome contributions from the community! Please be aware of the
 
 ## 🌈 Community & Support
 
-Feel free to reach out to me in the discussions tab or in the following places:
+Feel free to reach out to me in the discussions tab or the following places:
 - [Twitter](https://x.com/phanindraMax)
 - [BlueSky](https://bsky.app/profile/phanindra-max.bsky.social)
 - [LinkedIn](https://www.linkedin.com/in/phanindra-max/)
