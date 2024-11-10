@@ -52,27 +52,23 @@ pip install -r requirements.txt
 4. Download YOLOv3 weights:
 ```bash
 # Option 1: Using wget
-wget https://mega.nz/file/jFxnXIJI#q7NgkCPMzWje2M_0EvOYyxT9oIkCLJ2SlbyklxfR13k -O yolov3.weights
+wget "https://mega.nz/file/jFxnXIJI#q7NgkCPMzWje2M_0EvOYyxT9oIkCLJ2SlbyklxfR13k" -O yolov3.weights
 
 # Option 2: Manual download
 # Visit the link below and place the file in the project root:
 # https://mega.nz/file/jFxnXIJI#q7NgkCPMzWje2M_0EvOYyxT9oIkCLJ2SlbyklxfR13k
 ```
 
-### Configuration
-
-1. Copy the example configuration file:
-```bash
-cp config.example.yml config.yml
+5. Configure email settings:
+```python
+# Open the `main.py` file and update the following variables:
+mailfrom = "<SendersEmail>"
+gmailpass = "<SendersPass>"
+mailto = "<ReciversEmail>"
 ```
 
-2. Update `config.yml` with your email settings:
-```yaml
-email:
-  sender: "your-email@gmail.com"
-  password: "your-app-specific-password"
-  recipient: "recipient@example.com"
-```
+> [!NOTE]
+> Make sure to enable "Less secure app access" in your Gmail settings to send emails.
 
 ### Usage
 

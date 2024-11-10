@@ -22,9 +22,9 @@ parser.add_argument('--verbose', help="To print statements", default=True)
 args = parser.parse_args()
 
 #for the mail feature
-mailfrom = "SendersEmail"
-gmailpass = "SendersPass"
-mailto = "ReciversEmail"
+mailfrom = "<SendersEmail>"
+gmailpass = "<SendersPass>"
+mailto = "<ReciversEmail>"
 s = smtplib.SMTP('smtp.gmail.com', 587)
 s.ehlo()
 s.starttls()
