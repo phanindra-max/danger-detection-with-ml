@@ -6,6 +6,10 @@
 
 A real-time threat detection system using computer vision and machine learning to identify potentially dangerous objects (firearms and fire) and provide instant email notifications with visual evidence.
 
+
+Made with ❤️, for Safety 🦺
+
+
 ## 🎯 Features
 
 - Real-time detection of guns, rifles, and fire in video streams
@@ -62,16 +66,8 @@ curl -L https://pjreddie.com/media/files/yolov3.weights -o yolov3.weights
 curl -L https://raw.githubusercontent.com/pjreddie/darknet/master/cfg/yolov3.cfg -o yolov3.cfg
 ```
 
-2. **Create 
-
-obj.names
-
- file:**
-Create a new file named 
-
-obj.names
-
- with the following content:
+2. **Create obj.names file:**
+Create a new file named `obj.names` with the following content:
 ```txt
 gun
 rifle
@@ -90,9 +86,9 @@ fire
 2. **Update Email Settings:**
 ```python
 # In main.py, update these variables:
-mailfrom = "your.email@gmail.com"
-gmailpass = "your-16-digit-app-password"
-mailto = "receiver@email.com"
+mailfrom = "<your.email@gmail.com>"
+gmailpass = "<your-16-digit-app-password>"
+mailto = "<receiver@email.com>"
 ```
 
 ## 💻 Usage
@@ -132,13 +128,6 @@ We welcome contributions! Please see Contributing Guidelines.
 - [BlueSky](https://bsky.app/profile/phanindra-max.bsky.social)
 - [LinkedIn](https://www.linkedin.com/in/phanindra-max/)
 
-## 📝 License
-
-MIT License - see 
-
-LICENSE
-
- file.
 
 ## 🙏 Acknowledgments
 
@@ -148,7 +137,7 @@ LICENSE
 ## 📈 Roadmap
 
 - [ ] Add support for more object types
-- [ ] Implement real-time API
+- [ ] ~Implement real-time API~ (Abandoned due to monetary constraints)
 - [ ] Improve detection accuracy
 - [ ] Add cloud deployment options
 
