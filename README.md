@@ -1,4 +1,4 @@
-# Danger Detection with ML
+# Danger Detection with Computer Vision and ML
 
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
